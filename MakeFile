@@ -1,0 +1,10 @@
+DOCKER_COMP = docker compose
+
+dc-up:
+    sudo DOCKER_COMP up --remove-orphans
+
+dc-down:
+    sudo DOCKER_COMP down
+
+dc-remove-all:
+    sudo docker system prune -a
