@@ -35,4 +35,4 @@ RUN echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc \
 
 EXPOSE 9000
 
-CMD ["zsh"]
+CMD ["php-fpm"]

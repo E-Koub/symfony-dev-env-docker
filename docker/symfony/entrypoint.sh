@@ -16,3 +16,13 @@ if [ ! -f "$SRC_DIR/composer.json" ]; then
   cd -
   rm -Rf $TMP_DIR/  
 fi
+
+set -e
+
+# Install vendors if needed
+if [ ! -d "$SRC_DIR/vendor" ]; then
+  composer install
+fi
+
+# Lancer PHP-FPM
+exec php-fpm

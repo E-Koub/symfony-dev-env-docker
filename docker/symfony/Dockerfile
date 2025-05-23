@@ -42,4 +42,6 @@ RUN echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc \
 EXPOSE 9000
 
 # CMD pour démarrer zsh au lieu de sh par défaut
-CMD ["zsh"]
+
+CMD ["php-fpm", "-F","zsh"]
+
